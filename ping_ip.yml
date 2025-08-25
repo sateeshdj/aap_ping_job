@@ -1,0 +1,12 @@
+---
+- name: Ping a remote IP
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Ping 10.225.29.66
+      ansible.builtin.command: ping -c 4 10.225.29.66
+      register: ping_result
+
+    - name: Show ping output
+      ansible.builtin.debug:
+        var: ping_result.stdout
