@@ -3,8 +3,8 @@
   hosts: localhost
   gather_facts: no
   tasks:
-    - name: Get system hostname
-      ansible.builtin.command: hostname
+    - name: Get system information
+      ansible.builtin.command: ls
       register: hostname_output
 
     - name: Show hostname
