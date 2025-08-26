@@ -3,8 +3,8 @@
   hosts: localhost
   gather_facts: no
   tasks:
-    - name: Ping 10.225.30.184
-      ansible.builtin.command: ping -c 4 10.225.30.184
+    - name: Ping 10.225.30.23
+      ansible.builtin.command: ping -c 4 10.225.30.23
       register: ping_result
 
     - name: Show ping output
